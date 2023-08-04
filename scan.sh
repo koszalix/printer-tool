@@ -24,11 +24,23 @@ function _filename () {
   done
 }
 
-
-
 function A4_fast_pdf {
   _filename .pdf
-  hp-scan --res=300 --size=a4 --dest=pdf --file=$HOME/Scans/$filename
+  hp-scan --res=300 --size=a4 --dest=pdf --file=$OUT/$filename
 }
 
-A4_fast_pdf
+function A4_hq_pdf {
+  _filename .pdf
+  hp-scan --res=2400 --size=a4 --dest=pdf --file=$OUT/$filename
+}
+
+function A4_fast_png {
+  _filename .png
+  hp-scan --res=300 --size=a4 --dest=pdf --file=$OUT/$filename
+}
+
+function A4_hq_png {
+  _filename .png
+  hp-scan --res=2400 --size=a4 --dest=pdf --file=$OUT/$filename
+}
+
