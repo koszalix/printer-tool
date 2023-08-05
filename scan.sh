@@ -194,3 +194,73 @@ function photo_hq_png {
 #------------------------------------------------------------------------------+
 # USER INTERFACE                                                               |
 #------------------------------------------------------------------------------+
+
+HEIGHT=40
+WIDTH=40
+CHOICE_HEIGHT=4
+BACKTITLE="Scanner utility" 
+
+function main_menu {
+  OPTIONS=(1 "CUSTOM"
+           2 "A4_FAST PDF" 
+           3 "A4_FAST PNG" 
+           4 "A4_HQ PDF"   
+           5 "A4_HQ PNG"   
+           6 "A3_FAST PDF" 
+           7 "A3_FAST PNG" 
+           8 "A3_HQ PDF"   
+           9 "A3_HQ PNG"   
+           10 "A5_FAST PDF"
+           11 "A5_FAST PNG"
+           12 "A5_HQ PDF"
+           13 "A5_HQ PNG"
+           14 "A6_FAST PDF"
+           15 "A6_FAST PNG"
+           16 "A6_HQ PDF"
+           17 "A6_HQ PNG"
+           18 "B4_FAST PDF" 
+           19 "B4_FAST PNG" 
+           20 "B4_HQ PDF"   
+           21 "B4_HQ PNG"   
+           22 "B3_FAST PDF" 
+           23 "B3_FAST PNG" 
+           24 "B3_HQ PDF"   
+           25 "B3_HQ PNG"   
+           26 "B5_FAST PDF"
+           27 "B5_FAST PNG"
+           28 "B5_HQ PDF"
+           29 "B5_HQ PNG"
+           30 "5x7_HQ PNG"
+           31 "4x6_HQ PNG"
+           32 "3x5_HQ PNG"
+           33 "PHOTO_HQ PNG")
+
+  CHOICE=$(dialog --clear \
+                  --backtitle "$BACKTITLE" \
+                  --title "" \
+                  --menu "Select scanner mode" \
+                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${OPTIONS[@]}" \
+                  2>&1 >/dev/tty)
+ clear 
+}
+
+function parse_choise {
+
+
+
+}
+
+main_menu 
+ 
+
+
+
+
+
+
+
+
+
+
+
