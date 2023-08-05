@@ -232,10 +232,10 @@ function main_menu {
            29 "PHOTO_HQ PNG")
 
   CHOICE=$(dialog --clear \
-                  --backtitle "$BACKTITLE" \
+                  --backtitle "${BACKTITLE}" \
                   --title "" \
                   --menu "Select scanner mode" \
-                  $HEIGHT $WIDTH $CHOICE_HEIGHT \
+                  "${HEIGHT}" "${WIDTH}" "${CHOICE_HEIGHT}" \
                   "${OPTIONS[@]}" \
                   2>&1 >/dev/tty)
  clear 
