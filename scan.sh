@@ -222,18 +222,14 @@ function main_menu {
            19 "B4_FAST PNG" 
            20 "B4_HQ PDF"   
            21 "B4_HQ PNG"   
-           22 "B3_FAST PDF" 
-           23 "B3_FAST PNG" 
-           24 "B3_HQ PDF"   
-           25 "B3_HQ PNG"   
-           26 "B5_FAST PDF"
-           27 "B5_FAST PNG"
-           28 "B5_HQ PDF"
-           29 "B5_HQ PNG"
-           30 "5x7_HQ PNG"
-           31 "4x6_HQ PNG"
-           32 "3x5_HQ PNG"
-           33 "PHOTO_HQ PNG")
+           22 "B5_FAST PDF"
+           23 "B5_FAST PNG"
+           24 "B5_HQ PDF"
+           25 "B5_HQ PNG"
+           26 "5x7_HQ PNG"
+           27 "4x6_HQ PNG"
+           28 "3x5_HQ PNG"
+           29 "PHOTO_HQ PNG")
 
   CHOICE=$(dialog --clear \
                   --backtitle "$BACKTITLE" \
@@ -245,22 +241,101 @@ function main_menu {
  clear 
 }
 
-function parse_choise {
-
-
-
+function custom_menu {
+ echo "Custom"
 }
 
-main_menu 
- 
+function parse_choise {
+  case $CHOICE in
+    1)
+      custom_menu
+      ;;
+    2) 
+      A4_fast_pdf
+      ;;
+    3)
+      A4_fast_png
+      ;;
+    4)
+      A4_hq_pdf
+      ;;
+    5)
+      A4_hq_png
+      ;;
+    6) 
+      A3_fast_pdf  
+      ;;
+    7)           
+      A3_fast_png
+      ;;         
+    8)            
+      A3_hq_pdf
+      ;;
+    9)
+      A3_hq_png
+      ;;
+    10)             
+      A5_fast_pdf  
+      ;;           
+    11)            
+      A5_fast_png  
+      ;;           
+    12)             
+      A5_hq_pdf    
+      ;;           
+    13)             
+      A5_hq_png    
+      ;;           
+    14)             
+      A6_fast_pdf  
+      ;;           
+    15)             
+      A6_fast_png  
+      ;;           
+    16)             
+      A6_hq_pdf    
+      ;;           
+    17)             
+      A6_hq_png    
+      ;;
+    18)               
+      B5_fast_pdf  
+      ;;           
+    19)            
+      B5_fast_png  
+      ;;           
+    20)             
+      B5_hq_pdf    
+      ;;           
+    21)             
+      B5_hq_png    
+      ;;
+    22)               
+      B4_fast_pdf  
+      ;;           
+    23)            
+      B4_fast_png  
+      ;;           
+    24)             
+      B4_hq_pdf    
+      ;;           
+    25)             
+      B4_hq_png    
+      ;;
+    26)
+      57_hq_png
+      ;;
+    27)
+      46_hq_png
+      ;;
+    28)
+      35_hq_png
+      ;;
+    29)
+      photo_hq_png
+      ;;
+  esac
+}
 
-
-
-
-
-
-
-
-
-
-
+main_menu
+parse_choise 
