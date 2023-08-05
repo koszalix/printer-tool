@@ -334,6 +334,9 @@ function parse_choise {
     29)
       photo_hq_png
       ;;
+    *)
+      echo "Unidentified error"
+      exit
   esac
 }
 
