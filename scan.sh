@@ -11,14 +11,14 @@ function _filename () {
   counter=""
 
   while true; do
-    if [[ $counter == "" ]]
+    if [[ "${counter}" == "" ]]
     then
       filename="scan_${base_name}$1"
     else
       filename="scan_${base_name}_${counter}$1"
     fi
-    if [[ ! -e "$filename" ]]; then
-      return "$filename"
+    if [[ ! -e "${filename}" ]]; then
+      return "${filename}"
     fi
     ((counter++))
   done
