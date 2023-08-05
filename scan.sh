@@ -246,7 +246,7 @@ function custom_menu {
 }
 
 function parse_choise {
-  case $CHOICE in
+  case "${CHOICE}" in
     1)
       custom_menu
       ;;
